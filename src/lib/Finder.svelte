@@ -1,6 +1,16 @@
-
 <script>
-    // TODO: Peticion a la API y actualizar los elementos del Store
+    import { data } from "../finderStore";
+    let input = '';
+
+    const handleBtn = async () => {
+        let resp = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=PyiReUyCFTIE4tBE7u31jrqZ4WsXtZbO&q=${input}`);
+        resp = await resp.json();
+        
+        data.update(o => resp["data"]);
+        console.log($data);
+
+        input = '';
+    }
 </script>
 
 <form class="
@@ -10,14 +20,18 @@
         flex
         justify-center
         my-10
-    ">
+    "
+    on:submit|preventDefault={handleBtn}
+    >
     <input  class="
                 border-b
                 border-gray-400
                 p-2
             "
             type="text"
-            placeholder="Buscar Gif">
+            placeholder="Buscar Gif"
+            bind:value={input}
+            >
     
     <button class="
                 bg-slate-500
@@ -27,7 +41,8 @@
                 text-white
                 hover:bg-slate-800
             "
-            type="submit">
+            type="submit"
+            >
             Buscar
     </button>
 </form>

@@ -27,7 +27,11 @@
         bg-slate-900
         text-white
         text-center
-        py-8
+        py-4
+        w-full
+        left-0
+        bottom-0
+        fixed
     ">
     <p>Creado por Manuel Berganza</p>
 </footer>

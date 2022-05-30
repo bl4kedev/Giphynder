@@ -3,6 +3,7 @@
     import Card from "../lib/Card.svelte";
 
     // TODO: Crear los elementos globales de la Store
+    import { data } from "../finderStore";
 
 </script>
 
@@ -14,10 +15,10 @@
         mx-auto
         grid
         grid-cols-3
+        grid-flow-row-dense
         gap-6
     ">
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
+    {#each $data as gif}
+        <Card {gif} ></Card>
+    {/each}
 </div>
