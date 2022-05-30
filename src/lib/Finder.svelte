@@ -19,14 +19,19 @@
         items-center
         my-10
         mx-4
+        md:flex-row
+        md:justify-center
+        md:items-center
     "
     on:submit|preventDefault={handleBtn}
     >
     <input  class="
+                w-
                 border-b
                 border-gray-400
                 p-2
                 mb-6
+                md:mb-0
             "
             type="text"
             placeholder="Buscar Gif"
@@ -35,11 +40,13 @@
     
     <button class="
                 bg-slate-500
-                w-1/3
+                w-24
                 py-2
                 rounded-md
                 text-white
                 hover:bg-slate-800
+                md:px-6
+                md:ml-4
             "
             type="submit"
             >

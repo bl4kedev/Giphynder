@@ -1,22 +1,28 @@
 
 <script>
-
-    // export let title = '';
     export let gif;
-    // console.log(gif.images.downsized.url);
+
+    import { saveAs } from 'file-saver';
+
+    const handleClick = () => {
+        saveAs(gif.images["fixed_height"].url, 'giphynder.gif');
+    }
 
 </script>
 
 <div class="
         card
-        shadow-xl
+        shadow-md
+        shadow-gray-500
         w-full
         border
+        border-gray-300
         mb-10
         overflow-hidden
         rounded-lg
     ">
 
+    <!-- Insertar imagen de carga -->
     <img class="w-full max-h-44" 
          src={gif.images["fixed_height"].url}
          alt="">
@@ -35,7 +41,9 @@
             px-6
             rounded-md
             mb-3
-        ">Descargar</button>
+        "
+            on:click={handleClick}
+        >Descargar</button>
     </div>
 
 </div>

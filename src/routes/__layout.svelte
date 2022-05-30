@@ -10,7 +10,7 @@
         container
         w-10/12
         mx-auto
-        p-6
+        p-4
         ">
         <h1 class="
             text-white
@@ -27,7 +27,7 @@
         bg-slate-900
         text-white
         text-center
-        py-4
+        py-2
         w-full
         left-0
         bottom-0
