@@ -14,12 +14,11 @@
 </script>
 
 <form class="
-        container
-        w-10/12
-        mx-auto
         flex
-        justify-center
+        flex-col
+        items-center
         my-10
+        mx-4
     "
     on:submit|preventDefault={handleBtn}
     >
@@ -27,6 +26,7 @@
                 border-b
                 border-gray-400
                 p-2
+                mb-6
             "
             type="text"
             placeholder="Buscar Gif"
@@ -35,8 +35,8 @@
     
     <button class="
                 bg-slate-500
-                px-6
-                ml-4
+                w-1/3
+                py-2
                 rounded-md
                 text-white
                 hover:bg-slate-800
