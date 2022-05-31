@@ -1,10 +1,10 @@
 <script>
+    import { page } from '$app/stores';
+    import { data } from "../finderStore";
+
     import Finder from "../lib/Finder.svelte";
     import Card from "../lib/Card.svelte";
 
-    // TODO: Crear los elementos globales de la Store
-    import { data } from "../finderStore";
-    import { page } from '$app/stores';
 
 </script>
 
@@ -26,6 +26,6 @@
         lg:grid-cols-3
     ">
     {#each $data as gif}
-        <Card {gif} ></Card>
+        <Card title={gif.title} gifUrl={gif.images["fixed_height"].url} ></Card>
     {/each}
 </div>

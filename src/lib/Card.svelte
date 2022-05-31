@@ -1,11 +1,12 @@
 
 <script>
-    export let gif;
+    export let title;
+    export let gifUrl;
 
     import { saveAs } from 'file-saver';
 
     const handleClick = () => {
-        saveAs(gif.images["fixed_height"].url, 'giphynder.gif');
+        saveAs(gifUrl, 'giphynder.gif');
     }
 
 </script>
@@ -28,7 +29,7 @@
 
 
     <img class="w-full max-h-44" 
-            src={gif.images["fixed_height"].url}
+            src={gifUrl}
             alt="">
     
     <div class="
@@ -38,7 +39,7 @@
         justify-around
         p-2
     ">
-        <p class="p-5 text-center"> { gif["title"] } </p>
+        <p class="p-5 text-center"> { title } </p>
         <button class="
             bg-orange-500
             text-white

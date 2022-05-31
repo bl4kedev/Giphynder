@@ -3,12 +3,11 @@
     let input = '';
 
     const handleBtn = async () => {
-        let resp = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=PyiReUyCFTIE4tBE7u31jrqZ4WsXtZbO&q=${input}`);
+        data.set([]); // Resetea la resp global
+        let resp = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=PyiReUyCFTIE4tBE7u31jrqZ4WsXtZbO&q=${input}&limit=10`);
         resp = await resp.json();
         
         data.update(o => resp["data"]);
-        console.log($data);
-
         input = '';
     }
 </script>
