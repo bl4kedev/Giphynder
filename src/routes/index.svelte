@@ -4,8 +4,14 @@
 
     // TODO: Crear los elementos globales de la Store
     import { data } from "../finderStore";
+    import { page } from '$app/stores';
 
 </script>
+
+
+<svelte:head>
+  <title>{$page.stuff.title || 'Giphynder'}</title>
+</svelte:head>
 
 <Finder></Finder>
 
