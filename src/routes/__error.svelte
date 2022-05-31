@@ -9,15 +9,23 @@
         flex
         flex-col
         items-center
+        p-2
     ">
 
-    <h1 class="text-6xl text-green-600" >Lo sentimos! </h1>
+    <h1 class="text-4xl text-green-600 md:text-6xl" >Lo sentimos! </h1>
     
-    <pre class="text-4xl mt-5"> La página que buscas no existe</pre>
+    <p class="text-xl my-5 md:text-4xl"> La página que buscas no existe</p>
 
-    <a href="/" class="
+    <a 
+        href="/"
+        class="
         text-blue-700
-    ">
+        border
+        border-blue-700
+        rounded-md
+        py-1
+        px-4
+        ">
         Home
     </a>
 </div>
