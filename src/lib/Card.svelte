@@ -20,12 +20,17 @@
         mb-10
         overflow-hidden
         rounded-lg
+        transition
+        duration-200
+        hover:ease-linear
+        hover:scale-105
     ">
 
-    <!-- Insertar imagen de carga -->
+
     <img class="w-full max-h-44" 
-         src={gif.images["fixed_height"].url}
-         alt="">
+            src={gif.images["fixed_height"].url}
+            alt="">
+    
     <div class="
         flex
         flex-col
